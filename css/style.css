@@ -1,0 +1,388 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+selec,
+textarea {
+  font-family: "Heebo", sans-serif;
+}
+
+body {
+  background: #eeeeee;
+}
+
+/* LINHA COLORIDA */
+.container-fluidcolor-line {
+  background: linear-gradient(
+    to right,
+    #ff0101,
+    rgb(150, 4, 248),
+    rgb(150, 4, 248),
+    #ff0000
+  );
+  height: 6px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* NAVBAR | MENU TOPO */
+header #navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 80px;
+
+  background-color: #ffffff;
+}
+header #navbar .nav-brand {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #42008c;
+}
+header #navbar .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header #navbar .nav-list .nav-item a {
+  text-decoration: none;
+  color: #42008c;
+  font-size: 1rem;
+  font-weight: 500;
+}
+header #navbar .nav-list .nav-item a:hover {
+  color: rgb(0, 0, 0);
+  transition: color 0.2s;
+}
+/* DIV HEADER-MAIN */
+.div-header-main {
+  display: flex;
+  background-image: url(/assets/banner-div.png);
+  width: 1200px;
+  height: 400px;
+  align-items: center;
+  padding: 0 auto;
+  margin: 0 auto;
+}
+
+/* MAIN MENU INICIO */
+main #menu-inicio {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 30px;
+}
+main #menu-inicio ul {
+  display: flex;
+  margin: 0 auto;
+  padding: 02 auto;
+  background: rgb(24, 24, 24);
+  height: 30px;
+}
+main #menu-inicio ul li {
+  display: flex;
+  width: 200px;
+  list-style: none;
+  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+main #menu-inicio ul li:hover {
+  background: rgb(36, 36, 36);
+}
+main #menu-inicio ul li a:hover {
+  color: rgb(255, 0, 0);
+}
+main #menu-inicio .menu-btn {
+  text-decoration: none;
+  align-items: center;
+  font-weight: 600;
+}
+main .menu-btn {
+  text-decoration: none;
+  align-items: center;
+}
+main .menu-btn a {
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+main .menu-btn:hover {
+  box-shadow: 2px white;
+}
+/* MAIN SECTION BANNER PROMOÇÕES */
+main #banner {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  align-items: center;
+}
+main #banner .banner-content {
+  width: 1200px;
+  height: 300px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+}
+
+main #banner .banner-ret {
+  max-width: 530px;
+  height: 300px;
+  border-radius: 20px;
+}
+main #banner .banner-quad {
+  max-width: 400px;
+  height: 300px;
+  border-radius: 20px;
+}
+
+/* SECTION CAIXA DE MENSAGEM */
+.card-container {
+  background: rgb(255, 255, 255);
+  max-width: 1200px;
+  padding: 0 auto;
+  margin: 0 auto;
+  margin-top: 5rem;
+}
+main .card-container h2 {
+  align-items: center;
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+}
+main .caixa-dialogo {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 3rem;
+}
+main .caixa-dialogo .caixa-msg {
+  border: 2px solid #8d8d8d;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  width: 400px;
+}
+main .caixa-dialogo .caixa-msg h3 {
+  display: flex;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  align-items: center;
+}
+main .caixa-dialogo .caixa-msg {
+  color: rgb(122, 122, 122);
+}
+
+/* SECTION CARD-JORNADA */
+main #card-jornada {
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 2rem;
+  background-color: white;
+}
+main #card-jornada p {
+  max-width: 1100px;
+  margin-top: 2rem;
+}
+main #card-jornada .card-destaque {
+  color: #42008c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER RODAPÉ */
+footer .rodape {
+  max-width: 100%;
+  background: rgb(247, 247, 247);
+  margin-top: 3rem;
+}
+footer .ia-rodape {
+  list-style: none;
+  padding: 1rem;
+  max-width: 1200px;
+  padding: 0 auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 35rem;
+}
+footer .inline {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0 auto;
+}
+footer .ia-rodape2 {
+  display: flex;
+  list-style: none;
+  max-width: 1200px;
+  padding: 0 auto;
+  margin: 0 auto;
+  align-items: center;
+  margin-left: 40px;
+}
+
+/* INICIO HTML HOTEIS */
+
+main .main-hotel {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+section {
+  margin-bottom: 30rem;
+}
+
+/* Estilos para os cards de hotéis */
+.hotel-cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
+  display: flex;
+}
+
+.card {
+  background-color: #313131;
+  border: 2px solid rgb(218, 218, 218);
+  height: 600px;
+  color: #a842ff;
+  padding: 3rem;
+  margin: 0;
+}
+.card h2 {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card p {
+  display: flex;
+  margin-top: 2rem;
+  max-width: 600px;
+  max-height: 60px;
+}
+.card span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  color: rgb(0, 255, 0);
+}
+.card button {
+  font-size: 20px;
+  background: rgb(233, 233, 233);
+  width: 300px;
+  height: 35px;
+  margin-top: 3rem;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.card button:hover {
+  background: rgb(0, 255, 0);
+}
+.card button a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  margin-top: 3rem;
+}
+.card button a:hover {
+  color: white;
+}
+.card img {
+  width: 300px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+/*BOX SHADOW CARRO*/
+
+.card .img-carro:hover{
+  filter: drop-shadow(5px 5px 6px rgba(255, 255, 255));
+}
+.img-carro:hover {
+  filter: drop-shadow(5px 5px 6px rgba(255, 255, 255));
+}
+/* Estilos para o carrossel */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  color: #a842ff;
+}
+.carousel-container h3 {
+  margin-top: 4px;
+  color: white;
+}
+.carousel-container span {
+  display: flex;
+  color: rgb(0, 255, 0);
+}
+
+.carousel-page {
+  flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
+  background-color: #313131;
+  padding: 20px;
+  border-radius: 5px;
+  height: 300px;
+}
+.carrousel h3 {
+  margin-top: 1rem;
+  border-top: 2rem;
+  color: white;
+}
+.carousel-page img {
+  width: 230px;
+  height: 170px;
+  border-radius: 5px;
+}
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
