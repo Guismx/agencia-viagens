@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const prevBtn = document.querySelector(".prev");
   const nextBtn = document.querySelector(".next");
-  const carouselContainer = document.querySelector(".carousel-container");
+  const carouselContainer = document.querySelector(".carousel-container-index");
 
   let scrollPosition = 0;
 
@@ -30,4 +30,16 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth",
     });
   });
+});
+
+// TRANSPARÊNCIA DO MENU
+window.addEventListener("scroll", function () {
+  var navbar = document.getElementById("navbar-index");
+
+  if (window.scrollY > 400) {
+    // Define a quantidade de scroll para ativar a transparência (100 é um exemplo)
+    navbar.classList.add("transparent");
+  } else {
+    navbar.classList.remove("transparent");
+  }
 });

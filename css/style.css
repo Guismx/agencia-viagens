@@ -13,358 +13,292 @@ textarea {
 }
 
 body {
-  background: #eeeeee;
+  background: white;
 }
 
-/* LINHA COLORIDA */
+/* LINHA COLORIDA PADRÃO ------------------------------------------------------------------ */
 .container-fluidcolor-line {
-  background: linear-gradient(
-    to right,
-    #ff0101,
-    rgb(150, 4, 248),
-    rgb(150, 4, 248),
-    #ff0000
-  );
+  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
   height: 6px;
   max-width: 1200px;
   margin: 0 auto;
 }
-/* NAVBAR | MENU TOPO */
-header #navbar {
+/* NAVBAR | MENU TOPO INDEX ----------------------------------------------------------------*/
+
+header #navbar-index {
   display: flex;
-  justify-content: space-between;
+  position: fixed;
   align-items: center;
+  justify-content: space-between;
 
   padding: 0 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   height: 80px;
+  left: 50%;
+  z-index: 1000;
+  transform: translateX(-50%);
+  background-color: rgb(105, 105, 105);
+  box-shadow: 2px 2px rgba(0, 247, 255, 0.7);
 
-  background-color: #ffffff;
+  top: 0;
+  transition: background-color 0.5s ease, opacity 0.3s ease;
 }
-header #navbar .nav-brand {
+header #navbar-index.transparent {
+  background-color: rgba(75, 75, 75); /* Cor de fundo transparente */
+  opacity: 0.96; /* Opacidade reduzida */
+  width: 100%;
+  height: 40px;
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+header #navbar-index .nav-brand-index {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #42008c;
+  color: #00ccff;
 }
-header #navbar .nav-list {
+header #navbar-index .nav-list-index {
   list-style: none;
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-header #navbar .nav-list .nav-item a {
+header #navbar-index .nav-list-index .nav-item-index a {
   text-decoration: none;
-  color: #42008c;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
 }
-header #navbar .nav-list .nav-item a:hover {
-  color: rgb(0, 0, 0);
+header #navbar-index .nav-list-index .nav-item-index a:hover {
+  color: #00ccff;
   transition: color 0.2s;
 }
-/* DIV HEADER-MAIN */
-.div-header-main {
+/* DIV HEADER-MAIN INDEX--------------------------------------------------------------------*/
+body .div-header-main-index {
   display: flex;
-  background-image: url(/assets/banner-div.png);
   width: 1200px;
   height: 400px;
   align-items: center;
   padding: 0 auto;
   margin: 0 auto;
 }
+body .div-header-main-index img {
+  width: 100%;
+  max-height: 400px;
+}
 
-/* MAIN MENU INICIO */
-main #menu-inicio {
+/* MAIN MENU INICIO INDEX------------------------------------------------------------------ */
+main #menu-index {
   display: flex;
   align-items: center;
   margin: 0 auto;
   max-width: 1200px;
-  height: 30px;
 }
-main #menu-inicio ul {
+main #menu-index ul {
   display: flex;
   margin: 0 auto;
-  padding: 02 auto;
-  background: rgb(24, 24, 24);
   height: 30px;
 }
-main #menu-inicio ul li {
+main #menu-index ul li {
   display: flex;
-  width: 200px;
-  list-style: none;
-  background-color: rgb(0, 0, 0);
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
-main #menu-inicio ul li:hover {
-  background: rgb(36, 36, 36);
-}
-main #menu-inicio ul li a:hover {
-  color: rgb(255, 0, 0);
-}
-main #menu-inicio .menu-btn {
+main #menu-index .menu-btn {
   text-decoration: none;
   align-items: center;
   font-weight: 600;
 }
-main .menu-btn {
+main .menu-btn-index {
   text-decoration: none;
   align-items: center;
 }
-main .menu-btn a {
-  align-items: center;
-  list-style: none;
-  text-decoration: none;
-  color: white;
-}
-main .menu-btn:hover {
-  box-shadow: 2px white;
-}
-/* MAIN SECTION BANNER PROMOÇÕES */
-main #banner {
-  background: #333;
-  height: 320px;
+main .menu-btn-index a {
   display: flex;
+  width: 200px;
+  height: 30px;
+  list-style: none;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  color: #2b2b2b;
+  background: rgb(236, 236, 236);
+}
+main .menu-btn-index a:hover {
+  transition: 300ms;
+  color: #00ccff;
+  background-color: #696969;
+  box-shadow: 2px 2px #00ccff;
+}
+/* MAIN SECTION BANNER PROMOÇÕES INDEX------------------------------------------------------*/
+main #banner-index {
+  display: flex;
+  height: 300px;
   max-width: 1200px;
   margin: 0 auto;
-  align-items: center;
+  margin-top: 3px;
+  background: rgb(236, 236, 236);
 }
-main #banner .banner-content {
+main #banner-index .banner-content-index {
   width: 1200px;
   height: 300px;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
 }
 
-main #banner .banner-ret {
+main #banner-index .banner-ret-index {
+  height: 300px;
   max-width: 500px;
-  height: 300px;
-  border-radius: 20px;
-  margin-left: 1rem;
 }
-main #banner .banner-quad {
+main #banner-index .banner-quad-index {
+  height: 300px;
   max-width: 400px;
-  height: 300px;
-  border-radius: 20px;
+  margin-left: 15.5px;
 }
-
-/* SECTION CAIXA DE MENSAGEM */
-.card-container {
-  background: rgb(255, 255, 255);
-  max-width: 1200px;
-  padding: 0 auto;
-  margin: 0 auto;
-  margin-top: 5rem;
-}
-main .card-container h2 {
-  align-items: center;
-  background: rgb(255, 255, 255);
-  padding: 1rem;
-}
-main .caixa-dialogo {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 1rem;
-  padding: 3rem;
-}
-main .caixa-dialogo .caixa-msg {
-  border: 2px solid #8d8d8d;
-  border-radius: 20px;
-  background: rgb(255, 255, 255);
-  padding: 2rem;
-  width: 400px;
-}
-main .caixa-dialogo .caixa-msg h3 {
-  display: flex;
-  color: rgb(0, 0, 0);
-  margin-bottom: 20px;
-  align-items: center;
-}
-main .caixa-dialogo .caixa-msg {
-  color: rgb(122, 122, 122);
-}
-
-/* SECTION CARD-JORNADA */
-main #card-jornada {
+/* SECTION OPÇÕES INDEX------------------------------------------------------------------- */
+main .opcoes-index {
   align-items: center;
   max-width: 1200px;
+  padding: 5px;
   margin: 0 auto;
-  padding: 2rem;
-  margin-top: 2rem;
-  background-color: white;
+  background: rgb(236, 236, 236);
+  height: 720px;
+  margin-top: 2px;
 }
-main #card-jornada p {
-  max-width: 1100px;
-  margin-top: 2rem;
-}
-main #card-jornada .card-destaque {
-  color: #42008c;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER RODAPÉ */
-footer .rodape {
-  max-width: 100%;
-  background: rgb(247, 247, 247);
-  margin-top: 3rem;
-}
-footer .ia-rodape {
-  list-style: none;
-  padding: 1rem;
-  max-width: 1200px;
-  padding: 0 auto;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
-  gap: 35rem;
-}
-footer .inline {
-  display: flex;
-  list-style: none;
-  gap: 1rem;
-  padding: 0 auto;
-}
-footer .ia-rodape2 {
-  display: flex;
-  list-style: none;
-  max-width: 1200px;
-  padding: 0 auto;
-  margin: 0 auto;
-  align-items: center;
-  margin-left: 40px;
-}
-
-/* INICIO HTML HOTEIS */
-
-main .main-hotel {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 auto;
-}
-
-section {
-  margin-bottom: 30rem;
-}
-
-/* Estilos para os cards de hotéis */
-.hotel-cards {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 auto;
-  display: flex;
-}
-
-.card {
-  background-color: #313131;
-  border: 2px solid rgb(218, 218, 218);
-  height: 600px;
-  color: #a842ff;
-  padding: 3rem;
-  margin: 0;
-}
-.card h2 {
-  color: white;
+main .opcoes-index .card-title-index {
+  color: #00ccff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.card p {
-  display: flex;
-  margin-top: 2rem;
-  max-width: 600px;
-  max-height: 60px;
-}
-.card span {
+
+main .card-pacote-index {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  color: rgb(0, 255, 0);
+  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
+  margin: 1rem;
+  justify-content: space-between;
+  height: 200px;
 }
-.card button {
-  font-size: 20px;
-  background: rgb(233, 233, 233);
-  width: 300px;
-  height: 35px;
-  margin-top: 3rem;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-}
-.card button:hover {
-  background: rgb(0, 255, 0);
-}
-.card button a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  margin-top: 3rem;
-}
-.card button a:hover {
-  color: white;
-}
-.card img {
-  width: 300px;
-  height: 250px;
-  border-radius: 5px;
-}
-
-/*BOX SHADOW CARRO*/
-
-.card .img-carro:hover {
-  filter: drop-shadow(5px 5px 6px rgba(255, 255, 255));
-}
-.img-carro:hover {
-  filter: drop-shadow(5px 5px 6px rgba(255, 255, 255));
-}
-/* Estilos para o carrossel */
-.carousel {
-  position: relative;
-  overflow: hidden;
-  max-width: 1200px;
+main .card-pacote-index img {
   margin: 0 auto;
-  padding: 0 auto;
-}
-
-.carousel-container {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  color: #a842ff;
-}
-.carousel-container h3 {
-  margin-top: 4px;
-  color: white;
-}
-.carousel-container span {
-  display: flex;
-  color: rgb(0, 255, 0);
-}
-
-.carousel-page {
-  flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
-  background-color: #313131;
-  padding: 20px;
-  border-radius: 5px;
-  height: 300px;
-}
-.carrousel h3 {
-  margin-top: 1rem;
-  border-top: 2rem;
-  color: white;
-}
-.carousel-page img {
-  width: 230px;
+  width: 170px;
   height: 170px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+}
+main .card-pacote-index img:hover {
+  display: flex;
+  border-radius: 0px;
+  transform: scale(1.3, 1.3);
+  border: 2px solid black;
+  transition: 0.4s;
+}
+main .card-pacote-index .div-itens-index {
+  margin: 0 auto;
+  width: 920px;
+  height: 170px;
+  background: rgb(250, 250, 250);
+  border-radius: 8px;
+}
+main .card-pacote-index .div-itens-index h2 {
+  display: flex;
+  justify-content: center;
+  color: rgb(34, 34, 34);
+  align-items: center;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+main .card-pacote-index .div-itens-index p {
+  color: rgb(90, 90, 90);
+  align-items: center;
+  margin: 0 auto;
+  max-width: 870px;
+  max-height: 70px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+main .card-pacote-index .div-itens-index span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(28, 146, 12);
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+main .card-pacote-index .div-itens-index button {
+  margin: 0 auto;
+  display: flex;
+  width: 200px;
+  height: 35px;
+  background: #000000;
+  border: none;
+  padding: 2px;
+  border: 2px solid white;
+}
+main .card-pacote-index .div-itens-index button:hover {
+  background: #313131;
+}
+main .card-pacote-index .div-itens-index button a {
+  color: white;
+  width: 200px;
+  height: 35px;
+  font-size: 18px;
+  margin: 0 auto;
+  text-decoration: none;
+}
+main .card-pacote-index .div-itens-index button a:hover {
+  color: #00ccff;
+}
+/* CARROSEL INDEX-------------------------------------------------------------------------- */
+.carousel-index {
+  margin: 0 auto;
+  padding: 0 auto;
+  overflow: hidden;
+  height: 400px;
+  max-width: 1200px;
+  position: relative;
+  background-color: rgb(236, 236, 236);
+}
+
+.carousel-container-index {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  color: #424242;
+  scroll-behavior: unset;
+  overflow: hidden;
+}
+.carousel-page-index {
+  flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
+  padding: 20px;
   border-radius: 5px;
+  height: 380px;
+}
+.carousel-page-index:hover {
+  background: #e6faff;
+  transition: 400ms;
+}
+.carousel-index h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2rem;
+  color: #000000;
+  margin-bottom: 10px;
+}
+.carousel-page-index img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  border: 2px solid #fdfdfd;
+  transition: 1s;
+}
+.carousel-page-index img:hover {
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  border: 2px solid #fdfdfd;
 }
 
 button.prev,
@@ -372,9 +306,9 @@ button.next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #333;
-  color: #fff;
-  border: none;
+  background-color: transparent;
+  color: #00ccff;
+  border: 1px solid #0167ff;
   border-radius: 50%;
   padding: 10px;
   cursor: pointer;
@@ -388,218 +322,196 @@ button.prev {
 button.next {
   right: 10px;
 }
+button.prev:hover,
+button.next:hover {
+  background-color: #696969;
+  transition: 400ms;
+}
+/* SECTION CAIXA DE MENSAGEM INDEX----------------------------------------------------------*/
+.card-container-index {
+  max-width: 1200px;
+  padding: 0 auto;
+  margin: 0 auto;
+  background: rgb(236, 236, 236);
+}
+main .card-container-index h2 {
+  align-items: center;
+  padding: 1rem;
+}
+main .caixa-dialogo-index {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1rem;
+  padding: 3rem;
+}
+main .caixa-dialogo-index .caixa-msg-index {
+  border: 2px solid #00ccff;
+  border-radius: 20px;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  width: 400px;
+}
+main .caixa-dialogo-index .caixa-msg-index h3 {
+  display: flex;
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  align-items: center;
+}
+main .caixa-dialogo-index .caixa-msg-index {
+  color: rgb(122, 122, 122);
+}
 
-/* SECTION PACOTES */
-main .hotel-cards-pacote {
+/* SECTION CARD-JORNADA INDEX-------------------------------------------------------------- */
+main #card-jornada-index {
   align-items: center;
   max-width: 1200px;
-  padding: 5px;
   margin: 0 auto;
-  background: #333;
-  height: 700px;
-  margin-top: 2px;
+  padding: 2rem;
+  background-color: rgb(236, 236, 236);
 }
-main .hotel-cards-pacote .card-title {
-  color: rgb(150, 4, 248);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+main #card-jornada-index p {
+  max-width: 1100px;
 }
-
-main .card-pacote {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(
-    to right,
-    #dddddd,
-    rgb(150, 4, 248),
-    rgb(129, 129, 129),
-    #dddddd
-  );
-  margin: 1rem;
-  justify-content: space-between;
-  height: 200px;
-}
-main .card-pacote img {
-  margin: 0 auto;
-  width: 170px;
-  height: 170px;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 8px;
-}
-main .card-pacote .div-itens {
-  margin: 0 auto;
-  width: 920px;
-  height: 170px;
-  background: rgb(250, 250, 250);
-  border-radius: 8px;
-}
-main .card-pacote .div-itens h2 {
-  display: flex;
-  justify-content: center;
-  color: rgb(34, 34, 34);
-  align-items: center;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-main .card-pacote .div-itens p {
-  color: rgb(90, 90, 90);
-  align-items: center;
-  margin: 0 auto;
-  max-width: 870px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-main .card-pacote .div-itens span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(22, 22, 22);
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-main .card-pacote .div-itens button {
-  margin: 0 auto;
-  display: flex;
-  width: 200px;
-  height: 35px;
-  background: #313131;
-  border: none;
-  padding: 2px;
-  border-radius: 5px;
-}
-main .card-pacote .div-itens button:hover {
-  background: rgb(0, 255, 0);
-}
-main .card-pacote .div-itens button a {
+main #card-jornada-index .card-destaque-index {
+  color: #00ccff;
   text-decoration: none;
-  color: white;
-  font-size: 18px;
-  margin: 0 auto;
-  margin-top: 5px;
-}
-main .card-pacote .div-itens button a:hover {
-  color: black;
+  font-weight: bold;
 }
 
-/* STYLE LOGIN E CADASTRO */
+/* FOOTER RODAPÉ INDEX--------------------------------------------------------------------- */
 
-*, *:before, *:after { 
-  margin:0;
-  padding:0;
+/* STYLE LOGIN E CADASTRO ------------------------------------------------------------------*/
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
 }
 
-body .container-login{
-  margin:10px;
+body .container-login {
+  margin: 10px;
   margin-top: 10%;
 }
 
-body .container-login a{
+body .container-login a {
   text-decoration: none;
 }
 
-/* esconde as ancoras da tela */
-body a.links{
+/* ESCONDE DAS ANCORAS DA TELA DE CADASTRO------------------------------------------------- */
+body a.links {
   display: none;
 }
 
-/* content que contem os formulários */
-body .content-login{
+/* FORMULÁRIO DO CADASTRO------------------------------------------------------------------ */
+body .content-login {
   width: 500px;
   margin: 0px auto;
-  position: relative; 
+  position: relative;
 }
 
-/* formatando o cabeçalho dos formulários */
-body .container-login .content-login h1{
+/* FORMATA O CABEÇALHO DOS FORMULÁRIOS----------------------------------------------------- */
+body .container-login .content-login h1 {
   font-size: 48px;
   color: rgb(66, 0, 140);
   padding: 10px 0;
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
   padding-bottom: 30px;
 }
-body .content-login h1:after{
-  content: ' ';
+body .content-login h1:after {
+  content: " ";
   display: block;
   width: 100%;
   height: 2px;
   margin-top: 10px;
-  background: -webkit-linear-gradient(left, rgba(2, 219, 248, 0) 0%,rgba(66, 0, 140) 20%,rgba(66, 0, 140) 53%,rgba(66, 0, 140) 79%,rgba(147,184,189,0) 100%); 
-  background: linear-gradient(left, rgba(147,184,189,0) 0%,rgba(66, 0, 140) 20%,rgba(66, 0, 140) 53%,rgba(66, 0, 140) 79%,rgba(147,184,189,0) 100%); 
+  background: -webkit-linear-gradient(
+    left,
+    rgba(2, 219, 248, 0) 0%,
+    rgba(66, 0, 140) 20%,
+    rgba(66, 0, 140) 53%,
+    rgba(66, 0, 140) 79%,
+    rgba(147, 184, 189, 0) 100%
+  );
+  background: linear-gradient(
+    left,
+    rgba(147, 184, 189, 0) 0%,
+    rgba(66, 0, 140) 20%,
+    rgba(66, 0, 140) 53%,
+    rgba(66, 0, 140) 79%,
+    rgba(147, 184, 189, 0) 100%
+  );
 }
 
-p{
-  margin-bottom:15px;
+p {
+  margin-bottom: 15px;
 }
-p:first-child{
+p:first-child {
   margin: 0px;
 }
-body .content-login label{
+body .content-login label {
   color: #405c60;
   position: relative;
 }
 
-/**** advanced input styling ****/
-/* placeholder */
-::-webkit-input-placeholder  {
-  color: #bebcbc; 
+/*ESTILO AVANÇADO DO INPUT DO CADASTRO------------------------------------------------------*/
+/* PLACEHOLDER DO CADASTRO----------------------------------------------------------------- */
+::-webkit-input-placeholder {
+  color: #bebcbc;
   font-style: italic;
 }
 input:-moz-placeholder,
-textarea:-moz-placeholder{
+textarea:-moz-placeholder {
   color: #bebcbc;
   font-style: italic;
-} 
+}
 input {
   outline: none;
 }
 
-input:not([type="checkbox"]){
+input:not([type="checkbox"]) {
   width: 100%;
   margin-top: 4px;
-  padding: 10px;  
+  padding: 10px;
   border: 1px solid #42008c;
-  
+
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  
+
   -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
   box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-  
+
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-/*estilo do botão submit */
-
+/*BOTÃO SUBMIT DO CADASTRO----------------------------------------------------------------- */
 .btn-login {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%!important;
-  cursor: pointer;  
+  width: 100% !important;
+  cursor: pointer;
   background: #42008c;
   padding: 8px 5px;
   color: #fff;
-  font-size: 20px;  
-  border: 1px solid #fff; 
-  margin-bottom: 10px;  
+  font-size: 20px;
+  border: 1px solid #fff;
+  margin-bottom: 10px;
   text-shadow: 0 1px 1px #333;
-  
+
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  
+
   transition: all 0.2s linear;
 }
 .btn-login:hover {
   background: #a842ff;
 }
-/*marcando os links para mudar de um formulário para outro */
-.content-login .link{
+/*MARCA OS LINK PARA MUDAR DE UM FOMULÁRIO PARA O OUTRO DO CADASTRO-------------------------*/
+.content-login .link {
   position: absolute;
   color: #7f7c7c;
   left: 0px;
@@ -610,8 +522,8 @@ input:not([type="checkbox"]){
   text-align: right;
   border-top: 1px solid #42008c;
 
-  -webkit-border-radius: 0 0  5px 5px;
-  border-radius: 0 0  5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 .content-login .link a {
   font-weight: bold;
@@ -622,10 +534,10 @@ input:not([type="checkbox"]){
   border: 1px solid #a842ff;
 
   -webkit-border-radius: 4px;
-  border-radius: 4px;  
+  border-radius: 4px;
 
   -webkit-transition: all 0.4s linear;
-  transition: all 0.4s  linear;
+  transition: all 0.4s linear;
 }
 .content-login .link a:hover {
   color: #42008c;
@@ -633,20 +545,19 @@ input:not([type="checkbox"]){
   border: 1px solid #ffffff;
 }
 
-/* estilos para para ambos os formulários */
-#cadastro, 
-#login{
+/*ESTILO PARA MUDAR PARA AMBOS OS FORMULÁRIOS DO CADASTRO-----------------------------------*/
+#cadastro,
+#login {
   position: absolute;
   top: 0px;
-  width: 88%; 
+  width: 88%;
   padding: 18px 6% 60px 6%;
   margin: 0 0 35px 0;
   background: rgb(247, 247, 247);
-  border: 1px solid rgba(147, 184, 189,0.8);
-  
-  -webkit-box-shadow: 5px;
+  border: 1px solid rgba(147, 184, 189, 0.8);
+
   border-radius: 5px;
-  
+
   -webkit-animation-duration: 0.5s;
   -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: both;
@@ -657,21 +568,21 @@ input:not([type="checkbox"]){
 }
 
 #paracadastro:target ~ .content-login #cadastro,
-#paralogin:target ~ .content-login #login{
+#paralogin:target ~ .content-login #login {
   z-index: 2;
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
 
-  -webkit-animation-delay: .1s;
-  animation-delay: .1s;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 #registro:target ~ .content-login #login,
-#paralogin:target ~ .content-login #cadastro{
+#paralogin:target ~ .content-login #cadastro {
   -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
 }
 
-/*fadeInLeft*/
+/*FADE IN LEFT CADASTRO---------------------------------------------------------------------*/
 @-webkit-keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -694,7 +605,7 @@ input:not([type="checkbox"]){
   }
 }
 
-/*fadeOutLeft*/
+/*FADE OUT LEFT CADASTRO--------------------------------------------------------------------*/
 @-webkit-keyframes fadeOutLeft {
   0% {
     opacity: 1;
