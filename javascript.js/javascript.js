@@ -61,7 +61,7 @@ function carroselindex() {
   imgs.style.transform = `translateX(${-idx * 280}px)`;
 }
 
-setInterval(carroselindex, 2000);
+setInterval(carroselindex, 4000);
 
 // CARROSEL PACOTES INDEX/2
 const imgs2 = document.getElementById("img2");
@@ -79,7 +79,7 @@ function carroselindex2() {
   imgs2.style.transform = `translateX(${-idy * 280}px)`;
 }
 
-setInterval(carroselindex2, 2000);
+setInterval(carroselindex2, 4000);
 
 //CARROSEL PACOTES INDEX/3
 const imgs3 = document.getElementById("img3");
@@ -97,4 +97,4 @@ function carroselindex3() {
   imgs3.style.transform = `translateX(${-idz * 280}px)`;
 }
 
-setInterval(carroselindex3, 2000);
+setInterval(carroselindex3, 4000);

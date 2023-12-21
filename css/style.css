@@ -179,9 +179,11 @@ main .container-promo-index {
 }
 
 main .container-promo-index img {
+  display: flex;
   max-width: 280px;
-  min-height: 280px;
+  min-height: 250px;
   object-fit: cover;
+  align-items: center;
 }
 main .carrosel-info-index {
   width: 850px;
