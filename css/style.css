@@ -18,56 +18,54 @@ body {
 
 /* LINHA COLORIDA PADRÃO ------------------------------------------------------------------ */
 .container-fluidcolor-line {
-  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
   height: 6px;
-  max-width: 1200px;
   margin: 0 auto;
+  max-width: 1200px;
+  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
 }
 /* NAVBAR | MENU TOPO INDEX ----------------------------------------------------------------*/
 
 header #navbar-index {
-  display: flex;
-  position: fixed;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 2rem;
+  top: 0;
+  left: 50%;
   width: 100%;
   height: 80px;
-  left: 50%;
+  display: flex;
   z-index: 1000;
+  padding: 0 2rem;
+  position: fixed;
+  align-items: center;
   transform: translateX(-50%);
+  justify-content: space-between;
   background-color: rgb(105, 105, 105);
   box-shadow: 2px 2px rgba(0, 247, 255, 0.7);
-
-  top: 0;
   transition: background-color 0.5s ease, opacity 0.3s ease;
 }
 header #navbar-index.transparent {
-  background-color: rgba(75, 75, 75); /* Cor de fundo transparente */
-  opacity: 0.96; /* Opacidade reduzida */
   width: 100%;
   height: 40px;
+  opacity: 0.96; /* Opacidade reduzida */
+  background-color: rgba(75, 75, 75); /* Cor de fundo transparente */
   box-shadow: 2px 2px rgba(255, 255, 255, 0.7);
 }
 
 header #navbar-index .nav-brand-index {
-  text-decoration: none;
-  font-size: 1.5rem;
   font-weight: 700;
   color: #00ccff;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 header #navbar-index .nav-list-index {
-  list-style: none;
-  display: flex;
   gap: 2rem;
+  display: flex;
+  list-style: none;
   align-items: center;
 }
 header #navbar-index .nav-list-index .nav-item-index a {
-  text-decoration: none;
-  color: #ffffff;
   font-size: 1rem;
   font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
 }
 header #navbar-index .nav-list-index .nav-item-index a:hover {
   color: #00ccff;
@@ -78,9 +76,9 @@ body .div-header-main-index {
   display: flex;
   width: 1200px;
   height: 400px;
-  align-items: center;
-  padding: 0 auto;
   margin: 0 auto;
+  padding: 0 auto;
+  align-items: center;
 }
 body .div-header-main-index img {
   width: 100%;
@@ -90,41 +88,42 @@ body .div-header-main-index img {
 /* MAIN MENU INICIO INDEX------------------------------------------------------------------ */
 main #menu-index {
   display: flex;
-  align-items: center;
   margin: 0 auto;
   max-width: 1200px;
+  align-items: center;
 }
 main #menu-index ul {
+  height: 30px;
   display: flex;
   margin: 0 auto;
-  height: 30px;
 }
 main #menu-index ul li {
   display: flex;
 }
 main #menu-index .menu-btn {
-  text-decoration: none;
-  align-items: center;
   font-weight: 600;
+  align-items: center;
+  text-decoration: none;
 }
 main .menu-btn-index {
-  text-decoration: none;
   align-items: center;
+  text-decoration: none;
 }
 main .menu-btn-index a {
-  display: flex;
   width: 200px;
   height: 30px;
+  display: flex;
+  color: #2b2b2b;
   list-style: none;
+  font-weight: bold;
   align-items: center;
   text-decoration: none;
   justify-content: center;
-  color: #2b2b2b;
   background: rgb(236, 236, 236);
 }
 main .menu-btn-index a:hover {
-  transition: 300ms;
   color: #00ccff;
+  transition: 300ms;
   background-color: #696969;
   box-shadow: 2px 2px #00ccff;
 }
@@ -132,9 +131,9 @@ main .menu-btn-index a:hover {
 main #banner-index {
   display: flex;
   height: 300px;
-  max-width: 1200px;
   margin: 0 auto;
   margin-top: 3px;
+  max-width: 1200px;
   background: rgb(236, 236, 236);
 }
 main #banner-index .banner-content-index {
@@ -154,145 +153,138 @@ main #banner-index .banner-quad-index {
   margin-left: 15.5px;
 }
 /* SECTION OPÇÕES INDEX------------------------------------------------------------------- */
-main .opcoes-index {
-  align-items: center;
-  max-width: 1200px;
-  padding: 5px;
-  margin: 0 auto;
-  background: rgb(236, 236, 236);
-  height: 720px;
-  margin-top: 2px;
-}
-main .opcoes-index .card-title-index {
-  color: #00ccff;
+main .caixa-promo-index {
+  gap: 20px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  max-height: 300px;
+  justify-content: space-between;
+  border: 10px solid rgb(236, 236, 236);
+  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
 }
 
-main .card-pacote-index {
+main .carrosel-promo-index {
+  width: 280px;
+  width: 280px;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 2px 2px 4px black;
+}
+main .container-promo-index {
   display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+main .container-promo-index img {
+  max-width: 280px;
+  min-height: 280px;
+  object-fit: cover;
+}
+main .carrosel-info-index {
+  width: 850px;
+  height: 250px;
+  padding: 2rem;
   align-items: center;
-  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
-  margin: 1rem;
-  justify-content: space-between;
-  height: 200px;
-}
-main .card-pacote-index img {
-  margin: 0 auto;
-  width: 170px;
-  height: 170px;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 50%;
-}
-main .card-pacote-index img:hover {
-  display: flex;
-  border-radius: 0px;
-  transform: scale(1.3, 1.3);
-  border: 2px solid black;
-  transition: 0.4s;
-}
-main .card-pacote-index .div-itens-index {
-  margin: 0 auto;
-  width: 920px;
-  height: 170px;
-  background: rgb(250, 250, 250);
-  border-radius: 8px;
-}
-main .card-pacote-index .div-itens-index h2 {
-  display: flex;
   justify-content: center;
-  color: rgb(34, 34, 34);
-  align-items: center;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  box-shadow: 2px 2px 4px black;
+  background: rgb(239, 252, 255);
+  border: 2px solid rgb(255, 255, 255);
 }
-main .card-pacote-index .div-itens-index p {
-  color: rgb(90, 90, 90);
-  align-items: center;
-  margin: 0 auto;
-  max-width: 870px;
-  max-height: 70px;
-  margin-top: 6px;
-  margin-bottom: 6px;
-}
-main .card-pacote-index .div-itens-index span {
+main .carrosel-info-index h2 {
   display: flex;
+  color: #0167ff;
+  align-items: center;
+  justify-content: center;
+}
+main .carrosel-info-index p {
+  width: 730px;
+  height: 200px;
+  display: flex;
+  margin: 0 auto;
+  max-height: 100px;
+  align-items: center;
+  color: rgb(105, 105, 105);
+  background: rgb(239, 252, 255);
+}
+main .carrosel-info-index span {
+  display: flex;
+  font-weight: bold;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
   color: rgb(28, 146, 12);
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 6px;
-  margin-bottom: 6px;
 }
-main .card-pacote-index .div-itens-index button {
-  margin: 0 auto;
-  display: flex;
+main .carrosel-info-index button {
   width: 200px;
   height: 35px;
-  background: #000000;
   border: none;
   padding: 2px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 5px;
+  background: #000000;
   border: 2px solid white;
 }
-main .card-pacote-index .div-itens-index button:hover {
+main .carrosel-info-index button:hover {
   background: #313131;
 }
-main .card-pacote-index .div-itens-index button a {
-  color: white;
+main .carrosel-info-index button a {
   width: 200px;
   height: 35px;
-  font-size: 18px;
+  color: white;
   margin: 0 auto;
+  font-size: 18px;
   text-decoration: none;
 }
-main .card-pacote-index .div-itens-index button a:hover {
+main .carrosel-info-index button a:hover {
   color: #00ccff;
 }
 /* CARROSEL INDEX-------------------------------------------------------------------------- */
 .carousel-index {
+  height: 400px;
   margin: 0 auto;
   padding: 0 auto;
   overflow: hidden;
-  height: 400px;
   max-width: 1200px;
   position: relative;
   background-color: rgb(236, 236, 236);
 }
 
 .carousel-container-index {
-  display: flex;
   gap: 20px;
-  overflow-x: auto;
+  display: flex;
   color: #424242;
-  scroll-behavior: unset;
+  overflow-x: auto;
   overflow: hidden;
+  scroll-behavior: unset;
 }
 .carousel-page-index {
-  flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
   padding: 20px;
-  border-radius: 5px;
   height: 380px;
+  border-radius: 5px;
+  flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
 }
 .carousel-page-index:hover {
-  background: #e6faff;
   transition: 400ms;
+  background: #e6faff;
 }
 .carousel-index h3 {
   display: flex;
+  color: #000000;
+  border-top: 2rem;
+  margin-bottom: 10px;
   align-items: center;
   justify-content: center;
-  border-top: 2rem;
-  color: #000000;
-  margin-bottom: 10px;
 }
 .carousel-page-index img {
   width: 230px;
   height: 230px;
+  transition: 1s;
   border-radius: 50%;
   border: 2px solid #fdfdfd;
-  transition: 1s;
 }
 .carousel-page-index img:hover {
   width: 230px;
@@ -303,16 +295,16 @@ main .card-pacote-index .div-itens-index button a:hover {
 
 button.prev,
 button.next {
-  position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: #00ccff;
-  border: 1px solid #0167ff;
-  border-radius: 50%;
+  z-index: 1;
   padding: 10px;
   cursor: pointer;
-  z-index: 1;
+  color: #00ccff;
+  position: absolute;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: 1px solid #0167ff;
 }
 
 button.prev {
@@ -324,39 +316,39 @@ button.next {
 }
 button.prev:hover,
 button.next:hover {
-  background-color: #696969;
   transition: 400ms;
+  background-color: #696969;
 }
 /* SECTION CAIXA DE MENSAGEM INDEX----------------------------------------------------------*/
 .card-container-index {
-  max-width: 1200px;
-  padding: 0 auto;
   margin: 0 auto;
+  padding: 0 auto;
+  max-width: 1200px;
   background: rgb(236, 236, 236);
 }
 main .card-container-index h2 {
-  align-items: center;
   padding: 1rem;
+  align-items: center;
 }
 main .caixa-dialogo-index {
-  display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
   gap: 1rem;
+  display: flex;
   padding: 3rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 main .caixa-dialogo-index .caixa-msg-index {
-  border: 2px solid #00ccff;
-  border-radius: 20px;
-  background: rgb(255, 255, 255);
-  padding: 2rem;
   width: 400px;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 2px solid #00ccff;
+  background: rgb(255, 255, 255);
 }
 main .caixa-dialogo-index .caixa-msg-index h3 {
   display: flex;
-  color: rgb(0, 0, 0);
   margin-bottom: 20px;
   align-items: center;
+  color: rgb(0, 0, 0);
 }
 main .caixa-dialogo-index .caixa-msg-index {
   color: rgb(122, 122, 122);
@@ -364,10 +356,10 @@ main .caixa-dialogo-index .caixa-msg-index {
 
 /* SECTION CARD-JORNADA INDEX-------------------------------------------------------------- */
 main #card-jornada-index {
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  align-items: center;
   background-color: rgb(236, 236, 236);
 }
 main #card-jornada-index p {
@@ -375,8 +367,8 @@ main #card-jornada-index p {
 }
 main #card-jornada-index .card-destaque-index {
   color: #00ccff;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
 }
 
 /* FOOTER RODAPÉ INDEX--------------------------------------------------------------------- */
@@ -414,18 +406,18 @@ body .content-login {
 /* FORMATA O CABEÇALHO DOS FORMULÁRIOS----------------------------------------------------- */
 body .container-login .content-login h1 {
   font-size: 48px;
-  color: rgb(66, 0, 140);
   padding: 10px 0;
-  font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
   padding-bottom: 30px;
+  color: rgb(66, 0, 140);
+  font-family: Arial, sans-serif;
 }
 body .content-login h1:after {
   content: " ";
-  display: block;
   width: 100%;
   height: 2px;
+  display: block;
   margin-top: 10px;
   background: -webkit-linear-gradient(
     left,
@@ -473,37 +465,37 @@ input {
 
 input:not([type="checkbox"]) {
   width: 100%;
-  margin-top: 4px;
   padding: 10px;
+  margin-top: 4px;
   border: 1px solid #42008c;
 
-  -webkit-border-radius: 3px;
   border-radius: 3px;
+  -webkit-border-radius: 3px;
 
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
-
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
 }
 
 /*BOTÃO SUBMIT DO CADASTRO----------------------------------------------------------------- */
 .btn-login {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100% !important;
-  cursor: pointer;
-  background: #42008c;
-  padding: 8px 5px;
   color: #fff;
+  cursor: pointer;
   font-size: 20px;
-  border: 1px solid #fff;
+  padding: 8px 5px;
   margin-bottom: 10px;
+  align-items: center;
+  background: #42008c;
+  width: 100% !important;
+  justify-content: center;
+  border: 1px solid #fff;
   text-shadow: 0 1px 1px #333;
 
-  -webkit-border-radius: 5px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
 
   transition: all 0.2s linear;
 }
@@ -512,32 +504,32 @@ input:not([type="checkbox"]) {
 }
 /*MARCA OS LINK PARA MUDAR DE UM FOMULÁRIO PARA O OUTRO DO CADASTRO-------------------------*/
 .content-login .link {
-  position: absolute;
-  color: #7f7c7c;
   left: 0px;
   height: 20px;
   width: 440px;
-  padding: 17px 30px 20px 30px;
   font-size: 16px;
+  color: #7f7c7c;
   text-align: right;
+  position: absolute;
+  padding: 17px 30px 20px 30px;
   border-top: 1px solid #42008c;
 
-  -webkit-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
 }
 .content-login .link a {
-  font-weight: bold;
-  background: #42008c;
   padding: 6px;
-  color: rgb(255, 255, 255);
+  font-weight: bold;
   margin-left: 40px;
+  background: #42008c;
+  color: rgb(255, 255, 255);
   border: 1px solid #a842ff;
 
-  -webkit-border-radius: 4px;
   border-radius: 4px;
+  -webkit-border-radius: 4px;
 
-  -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
+  -webkit-transition: all 0.4s linear;
 }
 .content-login .link a:hover {
   color: #42008c;
@@ -548,38 +540,38 @@ input:not([type="checkbox"]) {
 /*ESTILO PARA MUDAR PARA AMBOS OS FORMULÁRIOS DO CADASTRO-----------------------------------*/
 #cadastro,
 #login {
-  position: absolute;
   top: 0px;
   width: 88%;
-  padding: 18px 6% 60px 6%;
+  position: absolute;
   margin: 0 0 35px 0;
+  padding: 18px 6% 60px 6%;
   background: rgb(247, 247, 247);
   border: 1px solid rgba(147, 184, 189, 0.8);
 
   border-radius: 5px;
 
   -webkit-animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease;
   -webkit-animation-fill-mode: both;
+  -webkit-animation-timing-function: ease;
 
   animation-duration: 0.5s;
-  animation-timing-function: ease;
   animation-fill-mode: both;
+  animation-timing-function: ease;
 }
 
 #paracadastro:target ~ .content-login #cadastro,
 #paralogin:target ~ .content-login #login {
   z-index: 2;
-  -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
+  -webkit-animation-name: fadeInLeft;
 
-  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
 }
 #registro:target ~ .content-login #login,
 #paralogin:target ~ .content-login #cadastro {
-  -webkit-animation-name: fadeOutLeft;
   animation-name: fadeOutLeft;
+  -webkit-animation-name: fadeOutLeft;
 }
 
 /*FADE IN LEFT CADASTRO---------------------------------------------------------------------*/
