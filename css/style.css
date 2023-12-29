@@ -20,16 +20,40 @@ body {
 .container-fluidcolor-line {
   height: 6px;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
 }
+/* SETA PARA VOLTAR AO TOPO DA PÁGINA-------------------------------------------------------*/
+.scrollTop {
+  border: 0;
+  opacity: 0;
+  z-index: 999;
+  display: flex;
+  outline: none;
+  width: 2.5rem;
+  right: 1.87rem;
+  height: 2.5rem;
+  bottom: 1.87rem;
+  position: fixed;
+  cursor: pointer;
+  background: none;
+  border-radius: 50%;
+  visibility: hidden;
+  transition: all.4s ease;
+}
+.scrollTop.active {
+  opacity: 1;
+  visibility: visible;
+}
+.scrollTop img {
+  width: 100%;
+}
 /* NAVBAR | MENU TOPO INDEX ----------------------------------------------------------------*/
-
 header #navbar-index {
   top: 0;
   left: 50%;
   width: 100%;
-  height: 80px;
+  height: 5rem;
   display: flex;
   z-index: 1000;
   padding: 0 2rem;
@@ -43,10 +67,45 @@ header #navbar-index {
 }
 header #navbar-index.transparent {
   width: 100%;
-  height: 40px;
   opacity: 0.96; /* Opacidade reduzida */
+  height: 2.5rem;
   background-color: rgba(75, 75, 75); /* Cor de fundo transparente */
   box-shadow: 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+header .caixa-pesquisa-index {
+  display: flex;
+  width: 43.75rem;
+  height: 2.18rem;
+  margin-left: 15rem;
+  align-items: center;
+  border-radius: 2.5rem;
+  justify-content: center;
+  background: rgba(75, 75, 75);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+header .caixa-pesquisa-index .pesquisa-text-index {
+  border: none;
+  outline: none;
+  width: 40.62rem;
+  height: 1.75rem;
+  color: rgb(8, 8, 8);
+  text-decoration: none;
+  border-radius: 2.18rem;
+  background: rgb(255, 255, 255);
+}
+header .caixa-pesquisa-index .btn-pesquisa-index {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: none;
+  text-decoration: none;
+}
+header .caixa-pesquisa-index .loupe-index {
+  width: 1.56rem;
+  height: 1.56rem;
+  margin-top: 0.62rem;
+  margin-left: 0.31rem;
 }
 
 header #navbar-index .nav-brand-index {
@@ -73,29 +132,37 @@ header #navbar-index .nav-list-index .nav-item-index a:hover {
 }
 /* DIV HEADER-MAIN INDEX--------------------------------------------------------------------*/
 body .div-header-main-index {
+  width: 75rem;
   display: flex;
-  width: 1200px;
-  height: 400px;
+  height: 25rem;
   margin: 0 auto;
   padding: 0 auto;
   align-items: center;
 }
 body .div-header-main-index img {
   width: 100%;
-  max-height: 400px;
+  max-height: 25rem;
 }
 
 /* MAIN MENU INICIO INDEX------------------------------------------------------------------ */
 main #menu-index {
   display: flex;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   align-items: center;
 }
+main #menu-index img {
+  width: 1.56rem;
+  height: 1.56rem;
+  margin-right: 20px;
+}
+main #menu-index img:hover {
+  filter: drop-shadow(0 0 1rem rgb(0, 162, 255));
+}
 main #menu-index ul {
-  height: 30px;
   display: flex;
   margin: 0 auto;
+  height: 1.87rem;
 }
 main #menu-index ul li {
   display: flex;
@@ -110,9 +177,9 @@ main .menu-btn-index {
   text-decoration: none;
 }
 main .menu-btn-index a {
-  width: 200px;
-  height: 30px;
   display: flex;
+  width: 12.5rem;
+  height: 1.87rem;
   color: #2b2b2b;
   list-style: none;
   font-weight: bold;
@@ -130,44 +197,44 @@ main .menu-btn-index a:hover {
 /* MAIN SECTION BANNER PROMOÇÕES INDEX------------------------------------------------------*/
 main #banner-index {
   display: flex;
-  height: 300px;
   margin: 0 auto;
   margin-top: 3px;
-  max-width: 1200px;
+  height: 18.75rem;
+  max-width: 75rem;
   background: rgb(236, 236, 236);
 }
 main #banner-index .banner-content-index {
-  width: 1200px;
-  height: 300px;
+  width: 75rem;
+  height: 18.75rem;
   align-items: center;
   justify-content: space-between;
 }
 
 main #banner-index .banner-ret-index {
-  height: 300px;
-  max-width: 500px;
+  height: 18.75rem;
+  max-width: 31.25rem;
 }
 main #banner-index .banner-quad-index {
-  height: 300px;
-  max-width: 400px;
-  margin-left: 15.5px;
+  height: 18.75rem;
+  max-width: 25rem;
+  margin-left: 0.96rem;
 }
 /* SECTION OPÇÕES INDEX------------------------------------------------------------------- */
 main .caixa-promo-index {
-  gap: 20px;
-  display: flex;
+  gap: 1.25rem;
   padding: 1rem;
+  display: flex;
   margin: 0 auto;
-  max-width: 1200px;
-  max-height: 300px;
+  max-width: 75rem;
+  max-height: 18.75rem;
   justify-content: space-between;
   border: 10px solid rgb(236, 236, 236);
   background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
 }
 
 main .carrosel-promo-index {
-  width: 280px;
-  width: 280px;
+  width: 17.5rem;
+  width: 17.5rem;
   overflow: hidden;
   border: 2px solid white;
   box-shadow: 2px 2px 4px black;
@@ -179,16 +246,14 @@ main .container-promo-index {
 }
 
 main .container-promo-index img {
-  display: flex;
-  max-width: 280px;
-  min-height: 250px;
+  width: 17.5rem;
+  height: 17.5rem;
   object-fit: cover;
-  align-items: center;
 }
 main .carrosel-info-index {
-  width: 850px;
-  height: 250px;
   padding: 2rem;
+  width: 53.12rem;
+  height: 15.6rem;
   align-items: center;
   justify-content: center;
   box-shadow: 2px 2px 4px black;
@@ -202,10 +267,10 @@ main .carrosel-info-index h2 {
   justify-content: center;
 }
 main .carrosel-info-index p {
-  width: 730px;
-  height: 200px;
   display: flex;
   margin: 0 auto;
+  width: 45.62rem;
+  height: 12.5rem;
   max-height: 100px;
   align-items: center;
   color: rgb(105, 105, 105);
@@ -214,8 +279,8 @@ main .carrosel-info-index p {
 main .carrosel-info-index span {
   display: flex;
   font-weight: bold;
-  margin-bottom: 10px;
   align-items: center;
+  margin-bottom: 0.62rem;
   justify-content: center;
   color: rgb(28, 146, 12);
 }
@@ -234,28 +299,28 @@ main .carrosel-info-index button:hover {
   background: #313131;
 }
 main .carrosel-info-index button a {
-  width: 200px;
-  height: 35px;
   color: white;
   margin: 0 auto;
-  font-size: 18px;
+  width: 12.5rem;
+  height: 2.18rem;
+  font-size: 1.12rem;
   text-decoration: none;
 }
 main .carrosel-info-index button a:hover {
   color: #00ccff;
 }
 /* CARROSEL INDEX-------------------------------------------------------------------------- */
-.carousel-index {
-  height: 400px;
+main .carousel-index {
+  height: 25rem;
   margin: 0 auto;
   padding: 0 auto;
   overflow: hidden;
-  max-width: 1200px;
+  max-width: 75rem;
   position: relative;
   background-color: rgb(236, 236, 236);
 }
 
-.carousel-container-index {
+main .carousel-container-index {
   gap: 20px;
   display: flex;
   color: #424242;
@@ -263,34 +328,34 @@ main .carrosel-info-index button a:hover {
   overflow: hidden;
   scroll-behavior: unset;
 }
-.carousel-page-index {
-  padding: 20px;
-  height: 380px;
-  border-radius: 5px;
+main .carousel-page-index {
+  padding: 1.25rem;
+  height: 23.75rem;
+  border-radius: 0.31rem;
   flex: 0 0 calc(25% - 20px); /* 25% para 4 hotéis por página */
 }
-.carousel-page-index:hover {
+main .carousel-page-index:hover {
   transition: 400ms;
   background: #e6faff;
 }
-.carousel-index h3 {
+main .carousel-index h3 {
   display: flex;
   color: #000000;
   border-top: 2rem;
-  margin-bottom: 10px;
   align-items: center;
+  margin-bottom: 0.62rem;
   justify-content: center;
 }
-.carousel-page-index img {
-  width: 230px;
-  height: 230px;
+main .carousel-page-index img {
   transition: 1s;
+  width: 14.37rem;
+  height: 14.37rem;
   border-radius: 50%;
   border: 2px solid #fdfdfd;
 }
-.carousel-page-index img:hover {
-  width: 230px;
-  height: 230px;
+main .carousel-page-index img:hover {
+  width: 14.37rem;
+  height: 14.37rem;
   border-radius: 10px;
   border: 2px solid #fdfdfd;
 }
@@ -305,16 +370,16 @@ button.next {
   position: absolute;
   border-radius: 50%;
   transform: translateY(-50%);
-  background-color: transparent;
   border: 1px solid #0167ff;
+  background-color: transparent;
 }
 
 button.prev {
-  left: 10px;
+  left: 0.62rem;
 }
 
 button.next {
-  right: 10px;
+  right: 0.62rem;
 }
 button.prev:hover,
 button.next:hover {
@@ -325,7 +390,7 @@ button.next:hover {
 .card-container-index {
   margin: 0 auto;
   padding: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   background: rgb(236, 236, 236);
 }
 main .card-container-index h2 {
@@ -337,19 +402,19 @@ main .caixa-dialogo-index {
   display: flex;
   padding: 3rem;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
 }
 main .caixa-dialogo-index .caixa-msg-index {
-  width: 400px;
+  width: 25rem;
   padding: 2rem;
-  border-radius: 20px;
+  border-radius: 1.25rem;
   border: 2px solid #00ccff;
   background: rgb(255, 255, 255);
 }
 main .caixa-dialogo-index .caixa-msg-index h3 {
   display: flex;
-  margin-bottom: 20px;
   align-items: center;
+  margin-bottom: 1.25rem;
   color: rgb(0, 0, 0);
 }
 main .caixa-dialogo-index .caixa-msg-index {
@@ -360,12 +425,12 @@ main .caixa-dialogo-index .caixa-msg-index {
 main #card-jornada-index {
   padding: 2rem;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 75rem;
   align-items: center;
   background-color: rgb(236, 236, 236);
 }
 main #card-jornada-index p {
-  max-width: 1100px;
+  max-width: 68.75rem;
 }
 main #card-jornada-index .card-destaque-index {
   color: #00ccff;
@@ -374,7 +439,93 @@ main #card-jornada-index .card-destaque-index {
 }
 
 /* FOOTER RODAPÉ INDEX--------------------------------------------------------------------- */
+footer .container-rodape-index {
+  margin: 0 auto;
+  height: 26.5rem;
+  max-width: 75rem;
+  justify-content: center;
+}
+footer .caixa-rodape-index {
+  width: 75rem;
+  display: flex;
+  padding: 3rem;
+  height: 12.5rem;
+  justify-content: space-between;
+  background-color: rgb(105, 105, 105);
+}
+footer .caixa-rodape-index li {
+  color: white;
+  list-style: none;
+}
+footer .formas-pag-index {
+  gap: 10rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 auto;
+  justify-content: center;
+}
+footer .formas-pag-index li {
+  display: inline;
+  text-decoration: none;
+}
+footer .formas-pag-index li img {
+  width: 2.5rem;
+  height: 1.8rem;
+  margin-top: 0.6rem;
+}
+footer h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+footer .receber-novidade-index h3 {
+  display: flex;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+footer .receber-novidade-index form {
+  margin-top: 2rem;
+  justify-content: center;
+}
+footer .receber-novidade-index label {
+  display: flex;
+  justify-content: center;
+}
+footer .receber-novidade-index input {
+  width: 37.5rem;
+  height: 2.5rem;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #00ccff;
+}
+footer .receber-novidade-index button {
+  width: 37.5rem;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  border-bottom-left-radius: 30px;
+  border-bottom: 2px solid #000;
+  border-bottom-right-radius: 30px;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #000000;
+  transition: all 0.2s;
+  box-shadow: 0px 1px 2px #00ccff;
+  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
+}
+footer .receber-novidade-index button:hover {
+  color: white;
+  background: linear-gradient(to right, #00ccff, #0167ff, #0167ff, #00ccff);
+}
 /* STYLE LOGIN E CADASTRO ------------------------------------------------------------------*/
 
 *,
@@ -385,7 +536,7 @@ main #card-jornada-index .card-destaque-index {
 }
 
 body .container-login {
-  margin: 10px;
+  margin: 0.6rem;
   margin-top: 10%;
 }
 
@@ -400,18 +551,18 @@ body a.links {
 
 /* FORMULÁRIO DO CADASTRO------------------------------------------------------------------ */
 body .content-login {
-  width: 500px;
+  width: 31.2rem;
   margin: 0px auto;
   position: relative;
 }
 
 /* FORMATA O CABEÇALHO DOS FORMULÁRIOS----------------------------------------------------- */
 body .container-login .content-login h1 {
-  font-size: 48px;
-  padding: 10px 0;
+  font-size: 3rem;
+  padding: 0.6rem 0;
   font-weight: bold;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 1.8rem;
   color: rgb(66, 0, 140);
   font-family: Arial, sans-serif;
 }
@@ -420,7 +571,7 @@ body .content-login h1:after {
   width: 100%;
   height: 2px;
   display: block;
-  margin-top: 10px;
+  margin-top: 0.6rem;
   background: -webkit-linear-gradient(
     left,
     rgba(2, 219, 248, 0) 0%,
@@ -440,7 +591,7 @@ body .content-login h1:after {
 }
 
 p {
-  margin-bottom: 15px;
+  margin-bottom: 0.9rem;
 }
 p:first-child {
   margin: 0px;
@@ -467,7 +618,7 @@ input {
 
 input:not([type="checkbox"]) {
   width: 100%;
-  padding: 10px;
+  padding: 0.6rem;
   margin-top: 4px;
   border: 1px solid #42008c;
 
@@ -486,17 +637,17 @@ input:not([type="checkbox"]) {
   display: flex;
   color: #fff;
   cursor: pointer;
-  font-size: 20px;
-  padding: 8px 5px;
-  margin-bottom: 10px;
+  font-size: 1.2rem;
   align-items: center;
+  margin-bottom: 0.6rem;
   background: #42008c;
+  padding: 0.5rem 0.3rem;
   width: 100% !important;
   justify-content: center;
   border: 1px solid #fff;
   text-shadow: 0 1px 1px #333;
 
-  border-radius: 5px;
+  border-radius: 0.3rem;
   -webkit-border-radius: 5px;
 
   transition: all 0.2s linear;
@@ -507,14 +658,14 @@ input:not([type="checkbox"]) {
 /*MARCA OS LINK PARA MUDAR DE UM FOMULÁRIO PARA O OUTRO DO CADASTRO-------------------------*/
 .content-login .link {
   left: 0px;
-  height: 20px;
-  width: 440px;
-  font-size: 16px;
+  height: 1.2rem;
+  width: 27.5rem;
+  font-size: 1rem;
   color: #7f7c7c;
   text-align: right;
   position: absolute;
-  padding: 17px 30px 20px 30px;
   border-top: 1px solid #42008c;
+  padding: 1rem 1.8rem 1.2rem 1.8rem;
 
   border-radius: 0 0 5px 5px;
   -webkit-border-radius: 0 0 5px 5px;
@@ -522,7 +673,7 @@ input:not([type="checkbox"]) {
 .content-login .link a {
   padding: 6px;
   font-weight: bold;
-  margin-left: 40px;
+  margin-left: 2.5rem;
   background: #42008c;
   color: rgb(255, 255, 255);
   border: 1px solid #a842ff;
@@ -546,7 +697,7 @@ input:not([type="checkbox"]) {
   width: 88%;
   position: absolute;
   margin: 0 0 35px 0;
-  padding: 18px 6% 60px 6%;
+  padding: 1.1rem 6% 3.7rem 6%;
   background: rgb(247, 247, 247);
   border: 1px solid rgba(147, 184, 189, 0.8);
 
