@@ -34,15 +34,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // TRANSPARÊNCIA DO MENU INDEX
 window.addEventListener("scroll", function () {
-  var navbar = document.getElementById("navbar-index");
+  // Verifica se a largura da tela é maior que 1200 pixels
+  if (window.innerWidth > 1200) {
+    var navbar = document.getElementById("navbar-index");
 
-  if (window.scrollY > 400) {
-    // Define a quantidade de scroll para ativar a transparência (100 é um exemplo)
-    navbar.classList.add("transparent");
-  } else {
-    navbar.classList.remove("transparent");
+    if (window.scrollY > 400) {
+      // Define a quantidade de scroll para ativar a transparência (100 é um exemplo)
+      navbar.classList.add("transparent");
+    } else {
+      navbar.classList.remove("transparent");
+    }
   }
 });
+
 
 // CARROSEL PACOTES INDEX/1
 
