@@ -7,18 +7,22 @@
 body,
 button,
 input,
-selec,
+select,
 textarea {
   font-family: "Heebo", sans-serif;
 }
 
 body {
-  background: rgb(255, 255, 255);
+  background: var(--branco-padrao);
 }
 /* CONTROLE DE CORES*/
 :root {
   --azul-primario: rgb(0, 204, 255);
   --azul-secundario: rgb(1, 103, 255);
+  --branco-padrao: rgb(255, 255, 255);
+  --branco-secundario: rgb(236, 236, 236);
+  --cinza-claro: rgb(105, 105, 105);
+  --preto-padrao: rgb(0, 0, 0, 0);
 }
 
 /* LINHA COLORIDA PADRÃO ------------------------------------------------------------------ */
@@ -66,7 +70,7 @@ header #navbar-index {
   align-items: center;
   transform: translateX(-50%);
   justify-content: space-between;
-  background-color: rgb(105, 105, 105);
+  background-color: var(--cinza-claro);
   box-shadow: 2px 2px rgba(0, 247, 255, 0.7);
   transition: background-color 0.5s ease, opacity 0.3s ease;
 }
@@ -97,7 +101,7 @@ header .caixa-pesquisa-index .pesquisa-text-index {
   color: rgb(8, 8, 8);
   text-decoration: none;
   border-radius: 2.18rem;
-  background: rgb(255, 255, 255);
+  background: var(--branco-padrao);
 }
 header .caixa-pesquisa-index .btn-pesquisa-index {
   border: none;
@@ -115,7 +119,7 @@ header .caixa-pesquisa-index .loupe-index {
 
 header #navbar-index .nav-brand-index {
   font-weight: 700;
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
   font-size: 1.5rem;
   text-decoration: none;
 }
@@ -128,11 +132,11 @@ header #navbar-index .nav-list-index {
 header #navbar-index .nav-list-index .nav-item-index a {
   font-size: 1rem;
   font-weight: 500;
-  color: rgb(255, 255, 255);
+  color: var(--branco-padrao);
   text-decoration: none;
 }
 header #navbar-index .nav-list-index .nav-item-index a:hover {
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
   transition: color 0.2s;
 }
 /* DIV HEADER-MAIN INDEX--------------------------------------------------------------------*/
@@ -191,13 +195,13 @@ main .menu-btn-index a {
   align-items: center;
   text-decoration: none;
   justify-content: center;
-  background: rgb(236, 236, 236);
+  background: var(--branco-secundario);
 }
 main .menu-btn-index a:hover {
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
   transition: 300ms;
-  background-color: rgb(105, 105, 105);
-  box-shadow: 2px 2px rgb(0, 204, 255);
+  background-color: var(--cinza-claro);
+  box-shadow: 2px 2px var(--azul-primario)
 }
 /* MAIN SECTION BANNER PROMOÇÕES INDEX------------------------------------------------------*/
 main #banner-index {
@@ -206,7 +210,7 @@ main #banner-index {
   margin-top: 3px;
   height: 18.75rem;
   max-width: 75rem;
-  background: rgb(236, 236, 236);
+  background: var(--branco-secundario);
 }
 main #banner-index .banner-content-index {
   width: 75rem;
@@ -233,16 +237,16 @@ main .caixa-promo-index {
   max-width: 75rem;
   max-height: 18.75rem;
   justify-content: space-between;
-  border: 10px solid rgb(236, 236, 236);
-  background: linear-gradient(to right, rgb(1, 103, 255), rgb(0, 204, 255),rgb(0, 204, 255), #0167ff);
+  border: 10px solid var(--branco-secundario);
+  background: linear-gradient(to right, var(--azul-secundario),var(--azul-primario),var(--azul-primario), var(--azul-secundario));
 }
 
 main .carrosel-promo-index {
   width: 17.5rem;
   width: 17.5rem;
   overflow: hidden;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+  border: 2px solid var(--branco-padrao);
+  box-shadow: 2px 2px 4px var(--preto-padrao);
 }
 main .container-promo-index {
   display: flex;
@@ -261,13 +265,13 @@ main .carrosel-info-index {
   height: 15.6rem;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 4px var(--preto-padrao);
   background: rgb(239, 252, 255);
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid var(--branco-padrao);
 }
 main .carrosel-info-index h2 {
   display: flex;
-  color: rgb(1, 103, 255);
+  color: var(--azul-secundario);
   align-items: center;
   justify-content: center;
 }
@@ -278,7 +282,7 @@ main .carrosel-info-index p {
   height: 12.5rem;
   max-height: 100px;
   align-items: center;
-  color: rgb(105, 105, 105);
+  color: var(--cinza-claro);
   background: rgb(239, 252, 255);
 }
 main .carrosel-info-index span {
@@ -297,14 +301,14 @@ main .carrosel-info-index button {
   display: flex;
   margin: 0 auto;
   border-radius: 5px;
-  background: rgb(0, 0, 0);
-  border: 2px solid rgb(255, 255, 255);
+  background: var(--preto-padrao);
+  border: 2px solid var(--branco-padrao);
 }
 main .carrosel-info-index button:hover {
   background: rgb(49, 49, 49);
 }
 main .carrosel-info-index button a {
-  color: rgb(255, 255, 255);
+  color: var(--branco-padrao);
   margin: 0 auto;
   width: 12.5rem;
   height: 2.18rem;
@@ -312,7 +316,7 @@ main .carrosel-info-index button a {
   text-decoration: none;
 }
 main .carrosel-info-index button a:hover {
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
 }
 /* CARROSEL INDEX-------------------------------------------------------------------------- */
 main .carousel-index {
@@ -322,7 +326,7 @@ main .carousel-index {
   overflow: hidden;
   max-width: 75rem;
   position: relative;
-  background-color: rgb(236, 236, 236);
+  background-color: var(--branco-secundario);
 }
 
 main .carousel-container-index {
@@ -345,7 +349,7 @@ main .carousel-page-index:hover {
 }
 main .carousel-index h3 {
   display: flex;
-  color: rgb(0, 0, 0);
+  color: var(--preto-padrao);
   border-top: 2rem;
   align-items: center;
   margin-bottom: 0.62rem;
@@ -371,11 +375,11 @@ button.next {
   z-index: 1;
   padding: 10px;
   cursor: pointer;
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
   position: absolute;
   border-radius: 50%;
   transform: translateY(-50%);
-  border: 1px solid rgb(1, 103, 255);
+  border: 1px solid var(--azul-secundario);
   background-color: transparent;
 }
 
@@ -389,14 +393,14 @@ button.next {
 button.prev:hover,
 button.next:hover {
   transition: 400ms;
-  background-color: rgb(105, 105, 105);
+  background-color: var(--cinza-claro);
 }
 /* SECTION CAIXA DE MENSAGEM INDEX----------------------------------------------------------*/
 .card-container-index {
   margin: 0 auto;
   padding: 0 auto;
   max-width: 75rem;
-  background: rgb(236, 236, 236);
+  background: var(--branco-secundario);
 }
 main .card-container-index h2 {
   padding: 1rem;
@@ -413,14 +417,14 @@ main .caixa-dialogo-index .caixa-msg-index {
   width: 25rem;
   padding: 2rem;
   border-radius: 1.25rem;
-  border: 2px solid rgb(0, 204, 255);
-  background: rgb(255, 255, 255);
+  border: 2px solid var(--azul-primario);
+  background: var(--branco-padrao);
 }
 main .caixa-dialogo-index .caixa-msg-index h3 {
   display: flex;
   align-items: center;
   margin-bottom: 1.25rem;
-  color: rgb(0, 0, 0);
+  color: var(--preto-padrao);
 }
 main .caixa-dialogo-index .caixa-msg-index {
   color: rgb(122, 122, 122);
@@ -432,13 +436,13 @@ main #card-jornada-index {
   margin: 0 auto;
   max-width: 75rem;
   align-items: center;
-  background-color: rgb(236, 236, 236);
+  background-color: var(--branco-secundario);
 }
 main #card-jornada-index p {
   max-width: 68.75rem;
 }
 main #card-jornada-index .card-destaque-index {
-  color: rgb(0, 204, 255);
+  color: var(--azul-primario);
   font-weight: bold;
   text-decoration: none;
 }
@@ -456,10 +460,10 @@ footer .caixa-rodape-index {
   padding: 3rem;
   height: 12.5rem;
   justify-content: space-between;
-  background-color: rgb(105, 105, 105);
+  background-color: var(--cinza-claro);
 }
 footer .caixa-rodape-index li {
-  color: rgb(255, 255, 255);
+  color: var(--branco-padrao);
   list-style: none;
 }
 footer .formas-pag-index {
@@ -505,7 +509,7 @@ footer .receber-novidade-index input {
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgb(0, 204, 255);
+  border: 1px solid var(--azul-primario);
 }
 footer .receber-novidade-index button {
   width: 37.5rem;
@@ -516,20 +520,20 @@ footer .receber-novidade-index button {
   justify-content: center;
 
   border-bottom-left-radius: 30px;
-  border-bottom: 2px solid rgb(0, 0, 0);
+  border-bottom: 2px solid var(--preto-padrao);
   border-bottom-right-radius: 30px;
 
   border: none;
   outline: none;
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: var(--preto-padrao);
   transition: all 0.2s;
-  box-shadow: 0px 1px 2px rgb(0, 204, 255);
-  background: linear-gradient(to right, rgb(1, 103, 255), rgb(0, 204, 255), rgb(0, 204, 255), rgb(1, 103, 255));
+  box-shadow: 0px 1px 2px var(--azul-primario);
+  background: linear-gradient(to right, var(--azul-secundario), var(--azul-primario), var(--azul-primario), var(--azul-secundario));
 }
 footer .receber-novidade-index button:hover {
-  color: rgb(255, 255, 255);
-  background: linear-gradient(to right, rgb(0, 204, 255), rgb(1, 103, 255), rgb(1, 103, 255), rgb(0, 204, 255));
+  color: var(--branco-padrao);
+  background: linear-gradient(to right, var(--azul-primario), var(--azul-secundario), var(--azul-secundario), var(--azul-primario));
 }
 /* STYLE LOGIN E CADASTRO ------------------------------------------------------------------*/
 
@@ -640,7 +644,7 @@ input:not([type="checkbox"]) {
 /*BOTÃO SUBMIT DO CADASTRO----------------------------------------------------------------- */
 .btn-login {
   display: flex;
-  color: rgb(255, 255, 255);
+  color: var(--branco-padrao);
   cursor: pointer;
   font-size: 1.2rem;
   align-items: center;
@@ -649,7 +653,7 @@ input:not([type="checkbox"]) {
   padding: 0.5rem 0.3rem;
   width: 100% !important;
   justify-content: center;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var(--branco-padrao);
   text-shadow: 0 1px 1px rgb(51, 51, 51);
 
   border-radius: 0.3rem;
@@ -680,7 +684,7 @@ input:not([type="checkbox"]) {
   font-weight: bold;
   margin-left: 2.5rem;
   background: rgb(66, 0, 140);
-  color: rgb(255, 255, 255);
+  color: var(--branco-padrao);
   border: 1px solid rgb(168, 66, 255);
 
   border-radius: 4px;
@@ -692,7 +696,7 @@ input:not([type="checkbox"]) {
 .content-login .link a:hover {
   color: rgb(66, 0, 140);
   background: rgb(247, 247, 247);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid var(--branco-padrao);
 }
 
 /*ESTILO PARA MUDAR PARA AMBOS OS FORMULÁRIOS DO CADASTRO-----------------------------------*/
