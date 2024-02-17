@@ -13,7 +13,12 @@ textarea {
 }
 
 body {
-  background: white;
+  background: rgb(255, 255, 255);
+}
+/* CONTROLE DE CORES*/
+:root {
+  --azul-primario: rgb(0, 204, 255);
+  --azul-secundario: rgb(1, 103, 255);
 }
 
 /* LINHA COLORIDA PADRÃO ------------------------------------------------------------------ */
@@ -21,7 +26,7 @@ body {
   height: 6px;
   margin: 0 auto;
   max-width: 75rem;
-  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
+  background: linear-gradient(to right, var(--azul-secundario), var(--azul-primario), var(--azul-primario), var(--azul-secundario));
 }
 /* SETA PARA VOLTAR AO TOPO DA PÁGINA-------------------------------------------------------*/
 .scrollTop {
@@ -110,7 +115,7 @@ header .caixa-pesquisa-index .loupe-index {
 
 header #navbar-index .nav-brand-index {
   font-weight: 700;
-  color: #00ccff;
+  color: rgb(0, 204, 255);
   font-size: 1.5rem;
   text-decoration: none;
 }
@@ -123,11 +128,11 @@ header #navbar-index .nav-list-index {
 header #navbar-index .nav-list-index .nav-item-index a {
   font-size: 1rem;
   font-weight: 500;
-  color: #ffffff;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 header #navbar-index .nav-list-index .nav-item-index a:hover {
-  color: #00ccff;
+  color: rgb(0, 204, 255);
   transition: color 0.2s;
 }
 /* DIV HEADER-MAIN INDEX--------------------------------------------------------------------*/
@@ -180,7 +185,7 @@ main .menu-btn-index a {
   display: flex;
   width: 12.5rem;
   height: 1.87rem;
-  color: #2b2b2b;
+  color: rgb(43, 43, 43);
   list-style: none;
   font-weight: bold;
   align-items: center;
@@ -189,10 +194,10 @@ main .menu-btn-index a {
   background: rgb(236, 236, 236);
 }
 main .menu-btn-index a:hover {
-  color: #00ccff;
+  color: rgb(0, 204, 255);
   transition: 300ms;
-  background-color: #696969;
-  box-shadow: 2px 2px #00ccff;
+  background-color: rgb(105, 105, 105);
+  box-shadow: 2px 2px rgb(0, 204, 255);
 }
 /* MAIN SECTION BANNER PROMOÇÕES INDEX------------------------------------------------------*/
 main #banner-index {
@@ -229,15 +234,15 @@ main .caixa-promo-index {
   max-height: 18.75rem;
   justify-content: space-between;
   border: 10px solid rgb(236, 236, 236);
-  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
+  background: linear-gradient(to right, rgb(1, 103, 255), rgb(0, 204, 255),rgb(0, 204, 255), #0167ff);
 }
 
 main .carrosel-promo-index {
   width: 17.5rem;
   width: 17.5rem;
   overflow: hidden;
-  border: 2px solid white;
-  box-shadow: 2px 2px 4px black;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 main .container-promo-index {
   display: flex;
@@ -262,7 +267,7 @@ main .carrosel-info-index {
 }
 main .carrosel-info-index h2 {
   display: flex;
-  color: #0167ff;
+  color: rgb(1, 103, 255);
   align-items: center;
   justify-content: center;
 }
@@ -292,14 +297,14 @@ main .carrosel-info-index button {
   display: flex;
   margin: 0 auto;
   border-radius: 5px;
-  background: #000000;
-  border: 2px solid white;
+  background: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
 }
 main .carrosel-info-index button:hover {
-  background: #313131;
+  background: rgb(49, 49, 49);
 }
 main .carrosel-info-index button a {
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0 auto;
   width: 12.5rem;
   height: 2.18rem;
@@ -307,7 +312,7 @@ main .carrosel-info-index button a {
   text-decoration: none;
 }
 main .carrosel-info-index button a:hover {
-  color: #00ccff;
+  color: rgb(0, 204, 255);
 }
 /* CARROSEL INDEX-------------------------------------------------------------------------- */
 main .carousel-index {
@@ -323,7 +328,7 @@ main .carousel-index {
 main .carousel-container-index {
   gap: 20px;
   display: flex;
-  color: #424242;
+  color: rgb(66, 66, 66);
   overflow-x: auto;
   overflow: hidden;
   scroll-behavior: unset;
@@ -336,11 +341,11 @@ main .carousel-page-index {
 }
 main .carousel-page-index:hover {
   transition: 400ms;
-  background: #e6faff;
+  background: rgb(230, 250, 255);
 }
 main .carousel-index h3 {
   display: flex;
-  color: #000000;
+  color: rgb(0, 0, 0);
   border-top: 2rem;
   align-items: center;
   margin-bottom: 0.62rem;
@@ -351,13 +356,13 @@ main .carousel-page-index img {
   width: 14.37rem;
   height: 14.37rem;
   border-radius: 50%;
-  border: 2px solid #fdfdfd;
+  border: 2px solid rgb(253, 253, 253);
 }
 main .carousel-page-index img:hover {
   width: 14.37rem;
   height: 14.37rem;
   border-radius: 10px;
-  border: 2px solid #fdfdfd;
+  border: 2px solid rgb(253, 253, 253);
 }
 
 button.prev,
@@ -366,11 +371,11 @@ button.next {
   z-index: 1;
   padding: 10px;
   cursor: pointer;
-  color: #00ccff;
+  color: rgb(0, 204, 255);
   position: absolute;
   border-radius: 50%;
   transform: translateY(-50%);
-  border: 1px solid #0167ff;
+  border: 1px solid rgb(1, 103, 255);
   background-color: transparent;
 }
 
@@ -384,7 +389,7 @@ button.next {
 button.prev:hover,
 button.next:hover {
   transition: 400ms;
-  background-color: #696969;
+  background-color: rgb(105, 105, 105);
 }
 /* SECTION CAIXA DE MENSAGEM INDEX----------------------------------------------------------*/
 .card-container-index {
@@ -408,7 +413,7 @@ main .caixa-dialogo-index .caixa-msg-index {
   width: 25rem;
   padding: 2rem;
   border-radius: 1.25rem;
-  border: 2px solid #00ccff;
+  border: 2px solid rgb(0, 204, 255);
   background: rgb(255, 255, 255);
 }
 main .caixa-dialogo-index .caixa-msg-index h3 {
@@ -433,7 +438,7 @@ main #card-jornada-index p {
   max-width: 68.75rem;
 }
 main #card-jornada-index .card-destaque-index {
-  color: #00ccff;
+  color: rgb(0, 204, 255);
   font-weight: bold;
   text-decoration: none;
 }
@@ -454,7 +459,7 @@ footer .caixa-rodape-index {
   background-color: rgb(105, 105, 105);
 }
 footer .caixa-rodape-index li {
-  color: white;
+  color: rgb(255, 255, 255);
   list-style: none;
 }
 footer .formas-pag-index {
@@ -500,7 +505,7 @@ footer .receber-novidade-index input {
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  border: 1px solid #00ccff;
+  border: 1px solid rgb(0, 204, 255);
 }
 footer .receber-novidade-index button {
   width: 37.5rem;
@@ -511,20 +516,20 @@ footer .receber-novidade-index button {
   justify-content: center;
 
   border-bottom-left-radius: 30px;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid rgb(0, 0, 0);
   border-bottom-right-radius: 30px;
 
   border: none;
   outline: none;
   cursor: pointer;
-  color: #000000;
+  color: rgb(0, 0, 0);
   transition: all 0.2s;
-  box-shadow: 0px 1px 2px #00ccff;
-  background: linear-gradient(to right, #0167ff, #00ccff, #00ccff, #0167ff);
+  box-shadow: 0px 1px 2px rgb(0, 204, 255);
+  background: linear-gradient(to right, rgb(1, 103, 255), rgb(0, 204, 255), rgb(0, 204, 255), rgb(1, 103, 255));
 }
 footer .receber-novidade-index button:hover {
-  color: white;
-  background: linear-gradient(to right, #00ccff, #0167ff, #0167ff, #00ccff);
+  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, rgb(0, 204, 255), rgb(1, 103, 255), rgb(1, 103, 255), rgb(0, 204, 255));
 }
 /* STYLE LOGIN E CADASTRO ------------------------------------------------------------------*/
 
@@ -597,19 +602,19 @@ p:first-child {
   margin: 0px;
 }
 body .content-login label {
-  color: #405c60;
+  color: rgb(64, 92, 96);
   position: relative;
 }
 
 /*ESTILO AVANÇADO DO INPUT DO CADASTRO------------------------------------------------------*/
 /* PLACEHOLDER DO CADASTRO----------------------------------------------------------------- */
 ::-webkit-input-placeholder {
-  color: #bebcbc;
+  color: rgb(190, 188, 188);
   font-style: italic;
 }
 input:-moz-placeholder,
 textarea:-moz-placeholder {
-  color: #bebcbc;
+  color: rgb(190, 188, 188);
   font-style: italic;
 }
 input {
@@ -620,7 +625,7 @@ input:not([type="checkbox"]) {
   width: 100%;
   padding: 0.6rem;
   margin-top: 4px;
-  border: 1px solid #42008c;
+  border: 1px solid rgb(66, 0, 140);
 
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -635,17 +640,17 @@ input:not([type="checkbox"]) {
 /*BOTÃO SUBMIT DO CADASTRO----------------------------------------------------------------- */
 .btn-login {
   display: flex;
-  color: #fff;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-size: 1.2rem;
   align-items: center;
   margin-bottom: 0.6rem;
-  background: #42008c;
+  background: rgb(66, 0, 140);
   padding: 0.5rem 0.3rem;
   width: 100% !important;
   justify-content: center;
-  border: 1px solid #fff;
-  text-shadow: 0 1px 1px #333;
+  border: 1px solid rgb(255, 255, 255);
+  text-shadow: 0 1px 1px rgb(51, 51, 51);
 
   border-radius: 0.3rem;
   -webkit-border-radius: 5px;
@@ -653,7 +658,7 @@ input:not([type="checkbox"]) {
   transition: all 0.2s linear;
 }
 .btn-login:hover {
-  background: #a842ff;
+  background: rgb(168, 66, 255);
 }
 /*MARCA OS LINK PARA MUDAR DE UM FOMULÁRIO PARA O OUTRO DO CADASTRO-------------------------*/
 .content-login .link {
@@ -661,10 +666,10 @@ input:not([type="checkbox"]) {
   height: 1.2rem;
   width: 27.5rem;
   font-size: 1rem;
-  color: #7f7c7c;
+  color: rgb(127, 124, 124);
   text-align: right;
   position: absolute;
-  border-top: 1px solid #42008c;
+  border-top: 1px solid rgb(66, 0, 140);
   padding: 1rem 1.8rem 1.2rem 1.8rem;
 
   border-radius: 0 0 5px 5px;
@@ -674,9 +679,9 @@ input:not([type="checkbox"]) {
   padding: 6px;
   font-weight: bold;
   margin-left: 2.5rem;
-  background: #42008c;
+  background: rgb(66, 0, 140);
   color: rgb(255, 255, 255);
-  border: 1px solid #a842ff;
+  border: 1px solid rgb(168, 66, 255);
 
   border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -685,9 +690,9 @@ input:not([type="checkbox"]) {
   -webkit-transition: all 0.4s linear;
 }
 .content-login .link a:hover {
-  color: #42008c;
-  background: #f7f7f7;
-  border: 1px solid #ffffff;
+  color: rgb(66, 0, 140);
+  background: rgb(247, 247, 247);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 /*ESTILO PARA MUDAR PARA AMBOS OS FORMULÁRIOS DO CADASTRO-----------------------------------*/
